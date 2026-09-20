@@ -3,16 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Build') {
-            steps {
-                echo 'Building application...'
-            }
-        }
-pipeline {
-    agent any
-
-    stages {
-
         stage('Pull Code') {
             steps {
                 checkout scm
@@ -39,17 +29,4 @@ pipeline {
         }
     }
 }
-        stage('Test') {
-            steps {
-                echo 'Testing application...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-            }
-        }
-
-    }
-}
+        
